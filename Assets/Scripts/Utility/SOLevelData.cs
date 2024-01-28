@@ -15,7 +15,7 @@ namespace Utility
             if (currentLevel > SeasonDatas[currentSeason - 1].Levels.Length)
             {
                 currentSeason++;
-                if (currentSeason > SeasonDatas.Length - 1) 
+                if (currentSeason > SeasonDatas.Length) 
                 { 
                     currentSeason = 1;
                 }

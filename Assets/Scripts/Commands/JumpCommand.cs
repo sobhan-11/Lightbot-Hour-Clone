@@ -1,4 +1,6 @@
-﻿using DG.Tweening;
+﻿using System;
+using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Commands
@@ -72,9 +74,9 @@ namespace Commands
         {
             //check for can jump down or not
             var raycastHits = Physics.RaycastAll(targetGameObject.transform.position + (targetGameObject.transform.forward * 2),
-                -targetGameObject.transform.up, 10f, LayerMask.GetMask("Cube"));
+                -targetGameObject.transform.up, 10f, LayerMask.GetMask("Cube")).OrderBy(h=>h.distance).ToList();
             
-            if (raycastHits.Length==0) // No Ground infront of You
+            if (raycastHits.Count==0) // No Ground infront of You
             {
                 End();
                 return false;

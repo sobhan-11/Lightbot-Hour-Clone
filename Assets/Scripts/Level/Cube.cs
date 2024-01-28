@@ -10,7 +10,6 @@ public class Cube : MonoBehaviour
     
     [Header("Config"), Space(5)] 
     public Enm_CubeType type;
-    public int id;
     [HideInInspector] public bool isLighted;
 
 

@@ -22,13 +22,6 @@ public class Level : MonoBehaviour
             Data.lightableCubes[i].ResetLightableCube();
         }
     }
-    
-    public void SetLightableCube(Cube cube)
-    {
-        if(Data==null) return;
-        
-        Data.lightableCubes.First(x=>x.id==cube.id).isLighted = true;
-    }
 }
 
 [Serializable]
