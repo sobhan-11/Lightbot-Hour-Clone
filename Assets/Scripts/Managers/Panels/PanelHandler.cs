@@ -12,9 +12,10 @@ namespace Managers
         [Header("Component"), Space(5)] 
         private PanelManager panelManager;
         
-        [Header("Congif"), Space(5)] 
+        [Header("Congif"), Space(5)]
+        [HideInInspector] public List<CommandUICard> commandList;
         public Enm_PanelHandlerType type;
-        public List<CommandUICard> commandList;
+        public int maxCardCapacity;
 
         [Header("UI-ObjectPool"), Space(5)] 
         [SerializeField] private ObjectPool commandUICardPool;
@@ -45,6 +46,8 @@ namespace Managers
         
         public void AddCard(Enm_CommandType newCommand)
         {
+            if(commandList.Count>=maxCardCapacity) return;
+            
             switch (newCommand)
             {
                 case Enm_CommandType.Move:

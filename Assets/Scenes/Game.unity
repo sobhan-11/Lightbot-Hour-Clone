@@ -3614,8 +3614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ed36309813486b903495f2dce4eb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
   commandList: []
+  type: 1
+  maxCardCapacity: 12
   commandUICardPool: {fileID: 1989549033}
   cardParent: {fileID: 1247038807}
   selectionButton: {fileID: 1077372982}
@@ -3934,8 +3935,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ed36309813486b903495f2dce4eb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
   commandList: []
+  type: 2
+  maxCardCapacity: 8
   commandUICardPool: {fileID: 1989549033}
   cardParent: {fileID: 715803092}
   selectionButton: {fileID: 1954460309}

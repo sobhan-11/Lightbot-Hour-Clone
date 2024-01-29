@@ -56,7 +56,7 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    #region SpawnLevel & RemoveLevel
+    #region HandleLevelSpawn
     
     public void NextLevel()
     {
@@ -151,7 +151,6 @@ public class LevelManager : MonoBehaviour
             onSuccessLevel?.Invoke();
             playerController.StopActions();
         }
-            
     }
 
     private void OnPlayerActionsStart()
